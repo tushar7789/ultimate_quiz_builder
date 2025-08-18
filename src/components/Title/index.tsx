@@ -13,7 +13,17 @@ const Title = () => {
                     width: '50px'
                 }}
             />
-            <p>The React Quiz</p>
+            <p
+                style={{
+                    // border: '1px solid blue',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '30px'
+                }}
+            >
+                The React Quiz
+            </p>
         </>
     )
 }
