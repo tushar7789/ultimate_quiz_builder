@@ -9,7 +9,6 @@ const useFetchQuestions = () => {
         const getQuestions = async () => {
             const data = await fetch(API, { 'signal': controller.signal });
             const json = await data.json();
-            // console.log("lleelle: ", json);
             setQuestions(json.results);
         }
 

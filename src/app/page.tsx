@@ -1,8 +1,6 @@
 import Grid from '@mui/material/Grid';
 import Title from "@/components/Title";
 import Quiz from '@/components/Quiz';
-
-
 export default function Home() {
 
   return (
