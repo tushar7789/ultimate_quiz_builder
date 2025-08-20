@@ -1,6 +1,7 @@
 'use client'
 
 import { Grid, Button } from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
 import React from 'react'
 
 import useFetchQuestions from '@/hooks/useFetchQuestions';
@@ -24,14 +25,21 @@ const Quiz = () => {
             container
             size={6}
             style={{
-                border: "1px solid yellow",
+                // border: "1px solid yellow",
                 height: "inherit"
             }}
             alignContent={'center'}
             justifyContent={'center'}
             direction={'column'}
         >
-            <Button variant="contained" onClick={handleClick}>Get Ques</Button>
+            {
+                currQues['status'] === '' &&
+                <Button variant="contained" onClick={handleClick}>Start Quiz</Button>
+            }
+            {
+                currQues['status'] === 'LOADING' &&
+                <CircularProgress />
+            }
         </Grid>
     )
 }

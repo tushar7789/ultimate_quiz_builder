@@ -6,4 +6,5 @@ export const initialQues: initialQuesInterface = {
     ques: '',
     options: [],
     correctAnswer: '',
+    status: ''
 }

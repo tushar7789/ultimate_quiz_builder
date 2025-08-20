@@ -10,7 +10,7 @@ const currQuesReducer = () => {
             case 'LOADING':
                 return {
                     ...state,
-                    ques: 'radom ques'
+                    status: 'LOADING'
                 }
 
                 return state;

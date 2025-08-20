@@ -1,7 +1,8 @@
 export default interface initialQuesInterface {
     'ques': string,
     'options': string[],
-    'correctAnswer': string
+    'correctAnswer': string,
+    'status': string
 }
 
 export type Action =
