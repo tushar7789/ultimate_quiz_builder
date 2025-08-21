@@ -2,12 +2,22 @@
 
 import { Grid, Button } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
-import React, { useEffect } from 'react'
-import { API } from '@/config';
+
+import React, { useEffect, useState } from 'react'
 import currQuesReducer from '@/reducers/currQuesReducer';
+
+import Questions from './questions';
+import ProgressBar from './progressBar';
+import Footer from './footer';
+
+import { API } from '@/config';
+import './styles.css';
+import { APIQuesInterface } from '@/interfaces/interfaces';
+
 
 const Quiz = () => {
 
+    const [questions, setQuestions] = useState<APIQuesInterface[]>();
     const { currQues, dispatch } = currQuesReducer();
 
     useEffect(() => {
@@ -15,11 +25,8 @@ const Quiz = () => {
         const getQuestions = async () => {
             const data = await fetch(API, { 'signal': controller.signal });
             const json = await data.json();
-            console.log("logging : ", json.results);
-            let q = localStorage.getItem('quizQues');
-            if (q === null) {
-                localStorage.setItem('quizQues', JSON.stringify(json.results));
-            }
+            console.log('logging qes: ', json.results);
+            setQuestions(json.results);
         }
 
         getQuestions();
@@ -27,25 +34,23 @@ const Quiz = () => {
 
         return () => {
             controller.abort();
-            localStorage.clear();
         }
     }, []);
 
     const handleClick = () => {
-        let q: any = localStorage.getItem('quizQues');
-        dispatch({ type: 'ACTIVE', payload: JSON.parse(q).at(currQues['currIndex'] + 1) });
+        dispatch({ type: 'ACTIVE', payload: questions?.at(currQues['currIndex'] + 1) });
     }
 
     return (
         <Grid
             container
-            size={6}
+            size={10}
             style={{
                 // border: "1px solid yellow",
                 height: "inherit"
             }}
-            alignContent={'center'}
-            justifyContent={'center'}
+            alignItems={'start'}
+            justifyContent={'space-around'}
             direction={'column'}
         >
             {
@@ -58,7 +63,11 @@ const Quiz = () => {
             }
             {
                 currQues['status'] === 'ACTIVE' &&
-                <p>Welcome to {currQues['ques']}</p>
+                <>
+                    <ProgressBar />
+                    <Questions currQues={currQues} />
+                    <Footer />
+                </>
             }
         </Grid>
     )
