@@ -21,7 +21,7 @@ const currQuesReducer = () => {
             case 'ACTIVE':
                 let randomInt = Math.floor(Math.random() * MAX);
                 let a: any = action.payload?.incorrect_answers.slice();
-                a.splice(randomInt, 0, action.payload?.correct_answer);
+                a?.splice(randomInt, 0, action.payload?.correct_answer);
                 console.log('from reducer :', action.payload?.incorrect_answers, '---', a);
                 return {
                     ...state,
@@ -30,6 +30,21 @@ const currQuesReducer = () => {
                     correctAnswer: action.payload?.correct_answer,
                     currIndex: state.currIndex + 1,
                     options: a
+                }
+            case 'LOCKED':
+                return {
+                    ...state,
+                    locked: true,
+                }
+            case 'UNLOCKED':
+                return {
+                    ...state,
+                    locked: false
+                }
+            case 'FINISHED':
+                return {
+                    ...state,
+                    status: 'FINISHED'
                 }
             default:
                 return state;

@@ -3,7 +3,8 @@ export interface initialQuesInterface {
     'options': string[] | undefined,
     'correctAnswer': string | undefined,
     'status': string,
-    'currIndex': number
+    'currIndex': number,
+    'locked': boolean | undefined
 }
 
 export interface APIQuesInterface {
@@ -15,13 +16,29 @@ export interface APIQuesInterface {
     'type': string
 }
 
+
 export type Action =
     | { type: 'LOADING' }
     | { type: 'READY' }
     | { type: 'ACTIVE', payload: APIQuesInterface | undefined }
+    | { type: 'LOCKED' }
+    | { type: 'UNLOCKED' }
     | { type: 'FINISHED' }
     | { type: 'RESET' }
 
 export interface QuestionsPropInterface {
-    currQues: initialQuesInterface;
+    'currQues': initialQuesInterface,
+    'dispatch': React.Dispatch<Action>
+}
+
+export interface ProgressBarPropInterface {
+    'currQues': initialQuesInterface,
+    'questions': APIQuesInterface[] | undefined
+}
+
+export interface FooterPropInterface {
+    'dispatch': React.Dispatch<Action>,
+    'payload': APIQuesInterface | undefined,
+    'index': number | undefined,
+    'totalLength': number | undefined
 }
