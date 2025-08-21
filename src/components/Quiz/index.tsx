@@ -1,6 +1,6 @@
 'use client'
 
-import { Grid, Button } from '@mui/material';
+import { Grid, Button, colors } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 
 import React, { useEffect, useState } from 'react'
@@ -47,9 +47,10 @@ const Quiz = () => {
             size={10}
             style={{
                 // border: "1px solid yellow",
-                height: "inherit"
+                height: "inherit",
+                color: 'white'
             }}
-            alignItems={'start'}
+            alignItems={'center'}
             justifyContent={'space-around'}
             direction={'column'}
         >
@@ -64,10 +65,19 @@ const Quiz = () => {
             {
                 currQues['status'] === 'ACTIVE' &&
                 <>
-                    <ProgressBar />
-                    <Questions currQues={currQues} />
-                    <Footer />
+                    <ProgressBar currQues={currQues} questions={questions} />
+                    <Questions currQues={currQues} dispatch={dispatch} />
+                    <Footer
+                        dispatch={dispatch}
+                        payload={questions?.at(currQues['currIndex'] + 1)}
+                        index={currQues['currIndex']}
+                        totalLength={questions?.length}
+                    />
                 </>
+            }
+            {
+                currQues['status'] === 'FINISHED' &&
+                <div>You have successfully Finished the Quiz!!</div>
             }
         </Grid>
     )

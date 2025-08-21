@@ -8,7 +8,6 @@
     justify-content: start;
     align-items: center;
 
-    margin-left: 25%;
 }
 
 .progress-bar-container > p {
@@ -61,6 +60,8 @@
     justify-content: space-around;
 }
 
+/* OPTION CLASSES--------------------- */
+
 .option {
     width: 100%;
     height: 18%;
@@ -72,7 +73,9 @@
     align-items: center;
 
     padding-left: 8px;
+    color: black;
 }
+
 
 .option:hover {
     cursor: pointer;
@@ -80,11 +83,7 @@
     color: white;
 }
 
-.option:hover .option-tag{
-    cursor: pointer;
-    background-color: white;
-    color: #327cc7;
-}
+/* TAGS------------------------------*/
 
 .option-tag {
     width: 7.5%;
@@ -97,11 +96,82 @@
     align-items: center;
 }
 
+.option:hover .option-tag{
+    cursor: pointer;
+    background-color: white;
+    color: #327cc7;
+}
+
+/* TEXT------------------------------ */
+
 .option-text {
     margin-left: 3%;
 }
 
+.option-res-text {
+    margin-right: 3%;
+}
 
+
+/* POSITIVE CASE--------------------- */
+
+.option-res-pos {
+    width: 100%;
+    height: 18%;
+    border-radius: 50px;
+    background-color: #3bb349;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+}
+
+.option-res-pos-tag {
+    width: 7.5%;
+    height: 80%;
+    background-color: white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* NEGATIVE CASE---------------------- */
+
+.option-res-neg {
+    width: 100%;
+    height: 18%;
+    border-radius: 50px;
+    background-color: #b32525;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+}
+
+.option-res-neg-tag {
+    width: 7.5%;
+    height: 80%;
+    background-color: white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------ */
 .btn-container {
     width: 40%;
     height: 10%;
