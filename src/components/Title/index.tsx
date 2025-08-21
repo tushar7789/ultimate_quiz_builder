@@ -9,8 +9,8 @@ const Title = () => {
                 src={TitleLogo.src}
                 alt="react-logo"
                 style={{
-                    height: '50px',
-                    width: '50px'
+                    height: '70px',
+                    width: '70px'
                 }}
             />
             <p
@@ -19,7 +19,8 @@ const Title = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '30px'
+                    fontSize: '40px',
+                    color: 'white'
                 }}
             >
                 The React Quiz

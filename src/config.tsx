@@ -6,4 +6,6 @@ export const initialQues: initialQuesInterface = {
     ques: '',
     options: [],
     correctAnswer: '',
+    status: 'LOADING',
+    currIndex: -1
 }
