@@ -1,0 +1,113 @@
+.progress-bar-container {
+    width: 50%;
+    height: 15%;
+    /* border: 1px solid green; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    margin-left: 25%;
+}
+
+.progress-bar-container > p {
+    display: inline-flex;
+    width: 20%;
+}
+
+.progress-tags {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+
+    color: white;
+}
+
+.ques-container {
+    width: 100%;
+    height: 65%;
+    /* border: 1px solid green; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ques-container-Q {
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid red; */
+    color: white;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.ques-container-options {
+    width: 57%;
+    height: 100%;
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.option {
+    width: 100%;
+    height: 18%;
+    border-radius: 50px;
+    background-color: white;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 8px;
+}
+
+.option:hover {
+    cursor: pointer;
+    background-color: #327cc7;
+    color: white;
+}
+
+.option:hover .option-tag{
+    cursor: pointer;
+    background-color: white;
+    color: #327cc7;
+}
+
+.option-tag {
+    width: 7.5%;
+    height: 80%;
+    background-color: #327cc7;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-text {
+    margin-left: 3%;
+}
+
+
+.btn-container {
+    width: 40%;
+    height: 10%;
+    /* border: 1px solid green; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,7 +1,7 @@
 export interface initialQuesInterface {
-    'ques': string,
-    'options': string[],
-    'correctAnswer': string,
+    'ques': string | undefined,
+    'options': string[] | undefined,
+    'correctAnswer': string | undefined,
     'status': string,
     'currIndex': number
 }
@@ -18,6 +18,10 @@ export interface APIQuesInterface {
 export type Action =
     | { type: 'LOADING' }
     | { type: 'READY' }
-    | { type: 'ACTIVE', payload: APIQuesInterface }
+    | { type: 'ACTIVE', payload: APIQuesInterface | undefined }
     | { type: 'FINISHED' }
     | { type: 'RESET' }
+
+export interface QuestionsPropInterface {
+    currQues: initialQuesInterface;
+}

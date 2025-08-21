@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { API } from '@/config';
+import { APIQuesInterface } from '@/interfaces/interfaces';
 
 const useFetchQuestions = () => {
-    const [questions, setQuestions] = useState();
+    const [questions, setQuestions] = useState<APIQuesInterface[]>();
 
     useEffect(() => {
         const controller = new AbortController();
