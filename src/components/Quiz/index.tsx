@@ -1,15 +1,14 @@
 'use client'
+import React, { useEffect, useState } from 'react'
 
-import { Grid, Button, colors } from '@mui/material';
+import { Grid } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 
-import React, { useEffect, useState } from 'react'
 import currQuesReducer from '@/reducers/currQuesReducer';
-
 import Questions from './questions';
 import ProgressBar from './progressBar';
 import Footer from './footer';
-
+import Button from '../Button/button';
 import { API } from '@/config';
 import './styles.css';
 import { APIQuesInterface } from '@/interfaces/interfaces';
@@ -60,7 +59,7 @@ const Quiz = () => {
             }
             {
                 currQues['status'] === 'READY' &&
-                <Button variant="contained" onClick={handleClick}>Start Quiz</Button>
+                <Button text={"Start Quiz"} onClick={handleClick} />
             }
             {
                 currQues['status'] === 'ACTIVE' &&
