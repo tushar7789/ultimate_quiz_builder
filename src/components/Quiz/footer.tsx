@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
 import { FooterPropInterface } from '@/interfaces/interfaces';
-import { Button } from '@mui/material';
+import Button from '../Button/button';
 import { DEFAULT_SANS_SERIF_FONT } from 'next/dist/shared/lib/constants';
 
 const Footer: React.FC<FooterPropInterface> = ({ dispatch, payload, index, totalLength }) => {
@@ -18,17 +18,16 @@ const Footer: React.FC<FooterPropInterface> = ({ dispatch, payload, index, total
     }
 
     return (
-        <div className="btn-container">
-            <Button variant="contained" >Time Left : 02:32</Button>
-            <Button variant="contained" onClick={handleNextClick}>
+        <div className="buttons-container">
+            <Button text={"Time Left : 02:32"} onClick={() => { }} />
+            <Button text=
                 {
                     index !== undefined ?
                         index + 1 === totalLength ?
                             "Finish" :
                             "Next" :
                         null
-                }
-            </Button>
+                } onClick={handleNextClick} />
         </div>
     )
 }

@@ -42,3 +42,13 @@ export interface FooterPropInterface {
     'index': number | undefined,
     'totalLength': number | undefined
 }
+
+export interface RegularOptionInterface {
+    text: string | undefined,
+    index: number | undefined
+}
+
+export interface IrregularOptionInterface {
+    text: string | undefined,
+    pos: boolean | undefined
+}

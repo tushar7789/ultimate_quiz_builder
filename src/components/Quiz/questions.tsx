@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { QuestionsPropInterface } from '@/interfaces/interfaces';
 import './styles.css'
-import { optionTags } from '@/config';
-import Right from '../../../public/static-images/check.png';
-import Wrong from '../../../public/static-images/close.png';
+import RegularOption from './Options/regularOption';
+import IrregularOption from './Options/irregularOption';
 
 const Questions: React.FC<QuestionsPropInterface> = ({ currQues, dispatch }) => {
     const [ind, setInd] = useState(-1);
@@ -27,7 +26,7 @@ const Questions: React.FC<QuestionsPropInterface> = ({ currQues, dispatch }) => 
             </div>
             <div className="ques-container-options">
                 {
-                    currQues['options']?.map((item, index) => (
+                    currQues['options']?.map((item: string, index: number) => (
                         < div
                             className={
                                 ind !== -1 ?
@@ -44,41 +43,14 @@ const Questions: React.FC<QuestionsPropInterface> = ({ currQues, dispatch }) => 
                             {
                                 ind !== -1 ?
                                     item === currQues['correctAnswer'] ?
-                                        <>
-                                            <div className="option-res-text">
-                                                {item}
-                                            </div>
-                                            <div className=" option-res-pos-tag">
-                                                <img src={Right.src} style={{ width: '20px', height: '20px' }} />
-                                            </div>
-
-                                        </> :
+                                        <IrregularOption text={item} pos={true} />
+                                        :
                                         ind === index ?
-                                            <>
-                                                <div className="option-res-text">
-                                                    {item}
-                                                </div>
-                                                <div className="option-res-neg-tag">
-                                                    <img src={Wrong.src} style={{ width: '20px', height: '20px' }} />
-                                                </div>
-
-                                            </> :
-                                            <>
-                                                <div className="option-tag">
-                                                    {optionTags[index]}
-                                                </div>
-                                                <div className="option-text">
-                                                    {item}
-                                                </div>
-                                            </> :
-                                    <>
-                                        <div className="option-tag">
-                                            {optionTags[index]}
-                                        </div>
-                                        <div className="option-text">
-                                            {item}
-                                        </div>
-                                    </>
+                                            <IrregularOption text={item} pos={false} />
+                                            :
+                                            <RegularOption text={item} index={index} />
+                                    :
+                                    <RegularOption text={item} index={index} />
                             }
                         </div>
 
