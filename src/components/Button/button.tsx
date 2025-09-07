@@ -1,6 +1,20 @@
 import React from 'react'
 import './styles.css'
-import { ButtonInterface } from '@/interfaces/interfaces'
+import { ButtonInterface, ButtonStyleInterface } from '@/interfaces/interfaces'
+
+// const styleTempObj: ButtonStyleInterface = {
+//     color: "black",
+//     width: "inherit",
+//     height: "50px",
+//     bgColor: "#327cc7",
+//     border: "1px solid red",
+//     borderRadius: "5px",
+//     paddingBottom: "0px",
+//     paddingTop: "0px",
+//     paddingLeft: "20px",
+//     paddingRight: "20px",
+//     cursor: "pointer"
+// }
 
 const Button: React.FC<ButtonInterface> = ({
     text,
@@ -9,7 +23,7 @@ const Button: React.FC<ButtonInterface> = ({
         color = "black",
         width = "inherit",
         height = "50px",
-        bgColor = "#327cc7",
+        bgColor = "none",
         border = "1px solid red",
         borderRadius = "5px",
         paddingBottom = "0px",
@@ -24,7 +38,7 @@ const Button: React.FC<ButtonInterface> = ({
         color: color,
         width: width,
         height: height,
-        bgColor: bgColor,
+        backgroundColor: bgColor,
         border: border,
         borderRadius: borderRadius,
         paddingBottom: paddingBottom,
@@ -35,7 +49,7 @@ const Button: React.FC<ButtonInterface> = ({
     }
 
     return (
-        <div style={styleObj} onClick={onClick}>
+        <div className="btn-container" style={styleObj} onClick={onClick}>
             {text}
         </div>
     )

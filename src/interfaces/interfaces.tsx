@@ -44,31 +44,31 @@ export interface FooterPropInterface {
 }
 
 export interface RegularOptionInterface {
-    text: string | undefined,
-    index: number | undefined
+    'text': string | undefined,
+    'index': number | undefined
 }
 
 export interface IrregularOptionInterface {
-    text: string | undefined,
-    pos: boolean | undefined
+    'text': string | undefined,
+    'pos': boolean | undefined
 }
 
 export interface ButtonInterface {
-    text?: string | undefined,
-    onClick?: React.MouseEventHandler<HTMLDivElement> | undefined,
-    style?: ButtonStyleInterface | undefined
+    'text'?: string | undefined,
+    'onClick'?: React.MouseEventHandler<HTMLDivElement> | undefined,
+    'style'?: ButtonStyleInterface | undefined
 }
 
 export interface ButtonStyleInterface {
-    color?: string | undefined,
-    width?: string | undefined,
-    height?: string | undefined,
-    bgColor?: string | undefined,
-    border?: string | undefined,
-    borderRadius?: string | undefined,
-    paddingLeft?: string | undefined,
-    paddingRight?: string | undefined,
-    paddingTop?: string | undefined,
-    paddingBottom?: string | undefined,
-    cursor?: string | undefined
+    'color'?: string | undefined,
+    'width'?: string | undefined,
+    'height'?: string | undefined,
+    'bgColor'?: string | undefined,
+    'border'?: string | undefined,
+    'borderRadius'?: string | undefined,
+    'paddingLeft'?: string | undefined,
+    'paddingRight'?: string | undefined,
+    'paddingTop'?: string | undefined,
+    'paddingBottom'?: string | undefined,
+    'cursor'?: string | undefined
 }
