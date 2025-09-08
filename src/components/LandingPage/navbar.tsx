@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+
 
 import './styles.css'
 
@@ -31,10 +33,20 @@ const Navbar = () => {
                 </p>
             </div>
             <div className="navbar-menu">
-                <Button text={"Home"} style={ActiveOptionStyleObj} />
-                <Button text={"Quizes"} style={InactiveOptionStyleObj} />
-                <Button text={"Statistics"} style={InactiveOptionStyleObj} />
-                <Button text={"About Us"} style={InactiveOptionStyleObj} />
+                <Link href="/">
+                    <Button text={"Home"} style={ActiveOptionStyleObj} />
+                </Link>
+                <Link href="/quiz">
+                    <Button text={"Quizes"} style={InactiveOptionStyleObj} />
+                </Link>
+                <Link href="/about">
+                    <Button text={"Statistics"} style={InactiveOptionStyleObj} />
+                </Link>
+                <Link href="/about">
+                    <Button text={"About Us"} style={InactiveOptionStyleObj} />
+                </Link>
+
+
             </div>
             <div className="navbar-login">
                 <Button text={"Login"} style={LoginStyleObj} />
