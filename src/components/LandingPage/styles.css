@@ -17,10 +17,10 @@
     height: 100%;
     min-width: 10vw;
     /* border: 1px solid yellow; */
-
+    padding-left: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
 }
 
 .navbar-menu {
@@ -38,11 +38,11 @@
     width: 17vw;
     /* border: 1px solid blue; */
     padding-left: 10px;
-    padding-right: 35px;
+    padding-right: 15px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 /* ------------------ Landing Body Styles ---------------- */
@@ -55,12 +55,12 @@
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
 .lb-section-1 {
-    width: 90vw;
+    width: fit-content;
     height: 27vh;
     /* border: 1px solid red; */
     color: #e8d313;
@@ -70,10 +70,12 @@
     display: flex;
     align-items: center;
     justify-content: start;
+
+    cursor: pointer;
 }
 
 .lb-section-2 {
-    width: 90vw;
+    width: fit-content;
     height: 27vh;
     /* border: 1px solid red; */
     color: #e8d313;
@@ -83,10 +85,12 @@
     display: flex;
     align-items: center;
     justify-content: start;
+
+    cursor: pointer;
 }
 
 .lb-section-3 {
-    width: 90vw;
+    width: fit-content;
     height: 27vh;
     /* border: 1px solid red; */
     color: #e8d313;
@@ -96,6 +100,8 @@
     display: flex;
     align-items: center;
     justify-content: start;
+
+    cursor: pointer;
 }
 
 
