@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react"
+
 export interface initialQuesInterface {
     'ques': string | undefined,
     'options': string[] | undefined,
@@ -56,7 +58,7 @@ export interface IrregularOptionInterface {
 export interface ButtonInterface {
     'text'?: string | undefined,
     'onClick'?: React.MouseEventHandler<HTMLDivElement> | undefined,
-    'style'?: ButtonStyleInterface
+    'style'?: ButtonStyleInterface | any
 }
 
 export interface ButtonStyleInterface {
@@ -72,4 +74,9 @@ export interface ButtonStyleInterface {
     'paddingBottom'?: string,
     'cursor'?: string,
     'fontSize'?: string
+}
+
+export interface NavbarContextValues {
+    currPage: string | undefined,
+    setCurrPage: Dispatch<SetStateAction<string>> | undefined
 }

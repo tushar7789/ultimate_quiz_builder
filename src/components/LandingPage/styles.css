@@ -17,6 +17,7 @@
     height: 100%;
     min-width: 10vw;
     /* border: 1px solid yellow; */
+    font-weight: 700;
     padding-left: 15px;
     display: flex;
     align-items: center;
@@ -63,8 +64,8 @@
     width: fit-content;
     height: 27vh;
     /* border: 1px solid red; */
-    color: #e8d313;
-    font-size: 100px;
+    color: #1341e8;
+    font-size: 150px;
     font-weight: 900;
 
     display: flex;
@@ -78,8 +79,8 @@
     width: fit-content;
     height: 27vh;
     /* border: 1px solid red; */
-    color: #e8d313;
-    font-size: 100px;
+    color: #1341e8;
+    font-size: 150px;
     font-weight: 900;
 
     display: flex;
@@ -93,8 +94,8 @@
     width: fit-content;
     height: 27vh;
     /* border: 1px solid red; */
-    color: #e8d313;
-    font-size: 100px;
+    color: #1341e8;
+    font-size: 150px;
     font-weight: 900;
 
     display: flex;

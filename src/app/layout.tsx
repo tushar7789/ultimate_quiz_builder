@@ -1,4 +1,9 @@
+'use client'
+
 import './globals.css';
+
+import Navbar from '@/components/LandingPage/navbar';
+import { NavbarContextProvider } from '@/contexts/NavbarContextProvider';
 
 export default function RootLayout({
   children,
@@ -8,7 +13,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <NavbarContextProvider>
+          <Navbar />
+          {children}
+        </NavbarContextProvider>
       </body>
     </html>
   );

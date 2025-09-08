@@ -7,16 +7,28 @@ import './styles.css'
 import Button from '../Button/button';
 import { LoginStyleObj, ActiveOptionStyleObj, InactiveOptionStyleObj } from './styleObjects';
 import MainLogo from '../../../public/static-images/main-logo.png';
+import { useNavbarContext } from '@/contexts/NavbarContextProvider';
+import { NavbarContextValues } from '@/interfaces/interfaces';
+
+const getClass = (a: string, b: string) => {
+    if (a === b)
+        return ActiveOptionStyleObj;
+    else
+        return InactiveOptionStyleObj;
+}
 
 const Navbar = () => {
+
+    const { currPage, setCurrPage }: any = useNavbarContext();
+
     return (
         <div className='navbar-container'>
             <div className="navbar-logo">
                 <img
                     src={MainLogo.src}
                     style={{
-                        height: '40px',
-                        width: '40px',
+                        height: '35px',
+                        width: '35px',
                         marginRight: '10px',
                         cursor: 'pointer'
                     }}
@@ -24,7 +36,7 @@ const Navbar = () => {
                 />
                 <p
                     style={{
-                        color: '#e8d313',
+                        color: '#1341e8',
                         fontSize: '20px',
                         cursor: 'pointer'
                     }}
@@ -34,16 +46,16 @@ const Navbar = () => {
             </div>
             <div className="navbar-menu">
                 <Link href="/">
-                    <Button text={"Home"} style={ActiveOptionStyleObj} />
+                    <Button text={"Home"} style={getClass('Home', currPage)} />
                 </Link>
                 <Link href="/quiz">
-                    <Button text={"Quizes"} style={InactiveOptionStyleObj} />
+                    <Button text={"Quizes"} style={getClass('Quiz', currPage)} />
+                </Link>
+                <Link href="/statistics">
+                    <Button text={"Statistics"} style={getClass('Statistics', currPage)} />
                 </Link>
                 <Link href="/about">
-                    <Button text={"Statistics"} style={InactiveOptionStyleObj} />
-                </Link>
-                <Link href="/about">
-                    <Button text={"About Us"} style={InactiveOptionStyleObj} />
+                    <Button text={"About Us"} style={getClass('About', currPage)} />
                 </Link>
 
 
