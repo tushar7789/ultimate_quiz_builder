@@ -1,14 +1,15 @@
 .btn-container {
     max-width: fit-content;
     height: 50px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #327cc7;
+    background-color: none;
     color: white;
-
     border-radius: 5px;
 }
 

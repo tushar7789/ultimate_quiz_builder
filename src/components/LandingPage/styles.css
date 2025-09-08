@@ -1,0 +1,103 @@
+/* ------------------  Landing Page Styles  ------------------- */
+
+
+/* ------------------  Navbar Styles  ------------------- */
+
+.navbar-container {
+    width: 100vw;
+    height: 8vh;
+    /* border-bottom: 1px solid #327cc7; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    height: 100%;
+    min-width: 10vw;
+    /* border: 1px solid yellow; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-menu {
+    height: 100%;
+    min-width: 35vw;
+    /* border: 1px solid green; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-login {
+    height: 100%;
+    width: 17vw;
+    /* border: 1px solid blue; */
+    padding-left: 10px;
+    padding-right: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ------------------ Landing Body Styles ---------------- */
+
+.landingbody-container {
+    width: 90vw;
+    height: 80vh;
+    margin: 5vh auto;
+    /* border: 1px solid yellow; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lb-section-1 {
+    width: 90vw;
+    height: 27vh;
+    /* border: 1px solid red; */
+    color: #e8d313;
+    font-size: 100px;
+    font-weight: 900;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.lb-section-2 {
+    width: 90vw;
+    height: 27vh;
+    /* border: 1px solid red; */
+    color: #e8d313;
+    font-size: 100px;
+    font-weight: 900;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.lb-section-3 {
+    width: 90vw;
+    height: 27vh;
+    /* border: 1px solid red; */
+    color: #e8d313;
+    font-size: 100px;
+    font-weight: 900;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+
+
