@@ -23,7 +23,8 @@ const LoginStyleObj = {
     paddingTop: "0px",
     paddingLeft: "10px",
     paddingRight: "10px",
-    cursor: "pointer"
+    cursor: "pointer",
+    fontSize: "15px"
 }
 
 const InactiveOptionStyleObj = {
@@ -54,6 +55,26 @@ const ActiveOptionStyleObj = {
     cursor: "pointer"
 }
 
+const AddNewQuizStyle = {
+    color: "white",
+    width: "10vw",
+    height: "5vh",
+    bgColor: "#e8d313",
+    border: "none",
+    borderRadius: "5px",
+    paddingBottom: "0px",
+    paddingTop: "0px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    cursor: "pointer",
+    fontSize: "15px"
+}
 
 
-export { ContactStyleObj, LoginStyleObj, ActiveOptionStyleObj, InactiveOptionStyleObj }
+
+export {
+    LoginStyleObj,
+    ActiveOptionStyleObj,
+    InactiveOptionStyleObj,
+    AddNewQuizStyle
+}

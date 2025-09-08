@@ -1,8 +1,9 @@
 import React from 'react'
+
 import './styles.css'
 
 import Button from '../Button/button';
-import { ContactStyleObj, LoginStyleObj, ActiveOptionStyleObj, InactiveOptionStyleObj } from './styleObjects';
+import { LoginStyleObj, ActiveOptionStyleObj, InactiveOptionStyleObj } from './styleObjects';
 import MainLogo from '../../../public/static-images/main-logo.png';
 
 const Navbar = () => {
@@ -14,13 +15,16 @@ const Navbar = () => {
                     style={{
                         height: '40px',
                         width: '40px',
+                        marginRight: '10px',
+                        cursor: 'pointer'
                     }}
                     alt=""
                 />
                 <p
                     style={{
                         color: '#e8d313',
-                        fontSize: '20px'
+                        fontSize: '20px',
+                        cursor: 'pointer'
                     }}
                 >
                     Quiz B
@@ -28,12 +32,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-menu">
                 <Button text={"Home"} style={ActiveOptionStyleObj} />
+                <Button text={"Quizes"} style={InactiveOptionStyleObj} />
+                <Button text={"Statistics"} style={InactiveOptionStyleObj} />
                 <Button text={"About Us"} style={InactiveOptionStyleObj} />
-                <Button text={"Product"} style={InactiveOptionStyleObj} />
-                <Button text={"Campaign"} style={InactiveOptionStyleObj} />
             </div>
             <div className="navbar-login">
-                <Button text={"Contact Us"} style={ContactStyleObj} />
                 <Button text={"Login"} style={LoginStyleObj} />
             </div>
         </div>

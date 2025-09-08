@@ -1,19 +1,6 @@
 import React from 'react'
 import './styles.css'
 import { ButtonInterface, ButtonStyleInterface } from '@/interfaces/interfaces'
-
-// const styleTempObj: ButtonStyleInterface = {
-//     color: "black",
-//     width: "inherit",
-//     height: "50px",
-//     bgColor: "#327cc7",
-//     border: "1px solid red",
-//     borderRadius: "5px",
-//     paddingBottom: "0px",
-//     paddingTop: "0px",
-//     paddingLeft: "20px",
-//     paddingRight: "20px",
-//     cursor: "pointer"
 // }
 
 const Button: React.FC<ButtonInterface> = ({
@@ -30,8 +17,9 @@ const Button: React.FC<ButtonInterface> = ({
         paddingTop = "0px",
         paddingLeft = "20px",
         paddingRight = "20px",
-        cursor = "pointer"
-    }
+        cursor = "pointer",
+        fontSize = "20px"
+    } = {}
 }) => {
 
     const styleObj = {
@@ -45,7 +33,8 @@ const Button: React.FC<ButtonInterface> = ({
         paddingTop: paddingTop,
         paddingLeft: paddingLeft,
         paddingRight: paddingRight,
-        cursor: cursor
+        cursor: cursor,
+        fontSize: fontSize
     }
 
     return (
