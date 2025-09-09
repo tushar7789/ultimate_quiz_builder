@@ -1,0 +1,32 @@
+.quiz-container {
+    width: inherit;
+    height: inherit;
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.quiz-tag-container {
+    width: inherit;
+    height: 20vh;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    background-color: #d1d1d1;
+}
+
+.quiz-list-container {
+    width: inherit;
+    height: 350px;
+    /* border: 1px solid red; */
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: start;
+}

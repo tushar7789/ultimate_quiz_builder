@@ -45,7 +45,7 @@ const Navbar = () => {
                 </p>
             </div>
             <div className="navbar-menu">
-                <Link href="/">
+                <Link href="/home">
                     <Button text={"Home"} style={getClass('Home', currPage)} />
                 </Link>
                 <Link href="/quiz">

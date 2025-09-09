@@ -1,7 +1,6 @@
 .about-container {
-    width: 96vw;
+    width: inherit;
     height: 80vh;
-    margin: 5vh auto;
     /* border: 1px solid green; */
     
     display: flex;

@@ -1,15 +1,17 @@
-'use client'
+import React from 'react'
 
-import React from 'react';
-
-import LandingBody from '@/components/LandingPage/landingbody';
-import { SetPage } from '@/contexts/NavbarContextProvider';
-
-export default function Home() {
-
-  SetPage('Home');
-
-  return (
-    <LandingBody />
-  );
+const PageNotFound = () => {
+    return (
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            textAlign: 'center',
+            fontSize: '50px',
+            fontWeight: '400'
+        }}>
+            Page Not Found
+        </div>
+    )
 }
+
+export default PageNotFound;

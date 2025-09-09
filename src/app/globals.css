@@ -25,3 +25,14 @@ body {
   /* background-color: #2f3133; */
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.body-content {
+  height: 92vh;
+  width: 98vw;
+  /* border: 1px solid red; */
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
