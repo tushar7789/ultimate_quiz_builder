@@ -27,6 +27,21 @@ const LoginStyleObj = {
     fontSize: "15px"
 }
 
+const ArrowStyleObj = {
+    color: "white",
+    width: "70px",
+    height: "30px",
+    bgColor: "#1341e8",
+    border: "none",
+    borderRadius: "50%",
+    paddingBottom: "10px",
+    paddingTop: "10px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    cursor: "pointer",
+    fontSize: "15px"
+}
+
 const InactiveOptionStyleObj = {
     color: "black",
     width: "inherit",
@@ -34,8 +49,8 @@ const InactiveOptionStyleObj = {
     bgColor: "none",
     border: "none",
     borderRadius: "5px",
-    paddingBottom: "0px",
-    paddingTop: "0px",
+    paddingBottom: "1px",
+    paddingTop: "1px",
     paddingLeft: "10px",
     paddingRight: "10px",
     cursor: "pointer",
@@ -46,11 +61,11 @@ const ActiveOptionStyleObj = {
     color: "#1341e8",
     width: "inherit",
     height: "25px",
-    bgColor: "#d1d1d1",
-    border: "none",
-    borderRadius: "5px",
+    bgColor: "none",
+    border: "1px solid #d1d1d1",
+    borderRadius: "none",
     paddingBottom: "0px",
-    paddingTop: "0px",
+    paddingTop: "1px",
     paddingLeft: "10px",
     paddingRight: "10px",
     cursor: "pointer",
@@ -78,5 +93,6 @@ export {
     LoginStyleObj,
     ActiveOptionStyleObj,
     InactiveOptionStyleObj,
-    AddNewQuizStyle
+    AddNewQuizStyle,
+    ArrowStyleObj
 }

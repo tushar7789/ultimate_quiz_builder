@@ -62,11 +62,13 @@ export interface ButtonInterface {
 }
 
 export interface ButtonStyleInterface {
+    'boxSizing'?: string,
     'color'?: string,
     'width'?: string,
     'height'?: string,
     'bgColor'?: string,
     'border'?: string,
+    'borderBottom'?: string,
     'borderRadius'?: string,
     'paddingLeft'?: string,
     'paddingRight'?: string,

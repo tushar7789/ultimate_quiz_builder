@@ -1,23 +1,43 @@
 import React from 'react'
 import './styles.css'
+import Link from 'next/link';
 
-import { quizList } from '@/config';
+import { quizList } from '@/fakeAPI_data';
+import { Paths } from '@/config';
+
 
 const QuizListItem = () => {
+
+    quizList.map(item => {
+        Paths.push(`/quiz/${item["id"]}`);
+    })
+
     return (
         <>
-            {
-                quizList.map((item: any) => {
-                    return (
-                        <p className='quiz-listitem' key={item['domain']}>
-                            <span id='quiz-item-name'>{item['name']}</span>
-                            <span id='quiz-item-domain'>{item['domain']}</span>
-                            <span id='quiz-item-total_questions'>{item['total_questions']}</span>
-                            <span id='quiz-item-right-arrow'>{">"}</span>
-                        </p>
-                    )
-                })
-            }
+            <p className='quiz-listitem sp'>
+                <span id='quiz-item-name'>Quiz Name</span>
+                <span id='quiz-item-domain'>Category</span>
+                <span id='quiz-item-total_questions'>Total Questions</span>
+            </p>
+            <div className='quiz-list-container'>
+
+                {
+                    quizList.map((item: any) => {
+                        return (
+                            <Link
+                                href={`/quiz/${item["id"]}`}
+                                key={item['domain']}
+                                className='quiz-listitem'
+                            >
+                                <span id='quiz-item-name'>{item['name']}</span>
+                                <span id='quiz-item-domain'>{item['domain']}</span>
+                                <span id='quiz-item-total_questions'>{item['total_questions']}</span>
+                            </Link>
+
+                        )
+                    })
+                }
+            </div>
         </>
     );
 }

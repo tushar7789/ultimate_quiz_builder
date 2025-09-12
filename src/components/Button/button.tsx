@@ -7,6 +7,7 @@ const Button: React.FC<ButtonInterface> = ({
     text,
     onClick,
     style: {
+        boxSizing = "border-box",
         color = "black",
         width = "inherit",
         height = "50px",
@@ -23,6 +24,7 @@ const Button: React.FC<ButtonInterface> = ({
 }) => {
 
     const styleObj = {
+        boxSizing: boxSizing,
         color: color,
         width: width,
         height: height,

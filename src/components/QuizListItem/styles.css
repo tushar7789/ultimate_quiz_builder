@@ -18,11 +18,22 @@
     padding: 0 13px;
 }
 
+.sp {
+    background-color: #1341e8;
+    color: white;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.sp:hover {
+    border: none;
+    padding: 0 15px;
+}
+
 #quiz-item-name, 
 #quiz-item-domain, 
 #quiz-item-total_questions {
     height: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 
     display: flex;
     justify-content: start;
@@ -41,3 +52,16 @@
     width: 15vw;
 }
 
+.quiz-list-container {
+    width: inherit;
+    height: 380px;
+    /* border: 1px solid red; */
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: start;
+}

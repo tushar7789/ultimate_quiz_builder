@@ -23,27 +23,31 @@ const Navbar = () => {
 
     return (
         <div className='navbar-container'>
-            <div className="navbar-logo">
-                <img
-                    src={MainLogo.src}
-                    style={{
-                        height: '35px',
-                        width: '35px',
-                        marginRight: '10px',
-                        cursor: 'pointer'
-                    }}
-                    alt=""
-                />
-                <p
-                    style={{
-                        color: '#1341e8',
-                        fontSize: '20px',
-                        cursor: 'pointer'
-                    }}
-                >
-                    Quiz B
-                </p>
-            </div>
+            <Link href="/home">
+                <div className="navbar-logo">
+
+                    <img
+                        src={MainLogo.src}
+                        style={{
+                            height: '35px',
+                            width: '35px',
+                            marginRight: '10px',
+                            cursor: 'pointer'
+                        }}
+                        alt=""
+                    />
+                    <p
+                        style={{
+                            color: '#1341e8',
+                            fontSize: '20px',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        Quiz B
+                    </p>
+
+                </div>
+            </Link>
             <div className="navbar-menu">
                 <Link href="/home">
                     <Button text={"Home"} style={getClass('Home', currPage)} />

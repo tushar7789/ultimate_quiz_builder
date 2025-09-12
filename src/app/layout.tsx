@@ -6,6 +6,8 @@ import './globals.css';
 
 import Navbar from '@/components/LandingPage/navbar';
 import { NavbarContextProvider } from '@/contexts/NavbarContextProvider';
+import { Paths } from '@/config';
+import PageNotFound from './page';
 
 export default function RootLayout({
   children,
@@ -19,14 +21,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {
-          currentPathname !== "/" ?
+          Paths.includes(currentPathname) ?
             <NavbarContextProvider>
               <Navbar />
               <div className="body-content">
                 {children}
               </div>
             </NavbarContextProvider> :
-            children
+            <PageNotFound />
         }
       </body>
     </html>
