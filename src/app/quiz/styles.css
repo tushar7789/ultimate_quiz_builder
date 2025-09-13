@@ -43,3 +43,123 @@
     align-items: start;
     justify-content: start;
 }
+
+
+/* --------------------- [id] styles  --------------------------- */
+
+.quiz-id-container {
+    width: inherit;
+    height: inherit;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.quiz-id-left-container, .quiz-id-right-container {
+    height : inherit;
+    width: 45vw;
+    /* border: 1px solid yellow; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#quiz-id-left-heading {
+    width: calc(45vw);
+    min-width: 0;
+    height: 37vh;
+    /* border: 2px solid #1341e8; */
+    background-color: #d1d1d1;
+    border-radius: 12px;
+    font-size: 50px;
+    /* text-overflow: ellipsis; */
+    /* overflow: hidden; */
+    margin-bottom: 2vh;
+    padding: 0 2vw;
+
+    display: flex;
+    align-items: start;
+    justify-content: start;
+
+    cursor: pointer;
+}
+
+#quiz-id-left-details {
+    width: inherit;
+    height: 40vh;
+    /* border: 1px solid green; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+#quiz-id-left-details > ul {
+    width: inherit;
+    height: inherit;
+    /* border: 1px solid rebeccapurple; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#quiz-id-left-details > ul > li {
+    width: inherit;
+    height: 8vh;
+    background-color: #d1d1d1;
+    /* border: 2px solid #1341e8; */
+    border-radius: 10px;
+    margin-bottom: 1vh;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.id-details-label {
+    width: 25vw;
+    height: inherit;
+    /* border: 1px solid rebeccapurple; */
+    padding-right: 3vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.id-details-value {
+    width: 13vw;
+    height: inherit;
+    /* border: 1px solid rebeccapurple; */
+    padding-right: 3vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#quiz-id-left-details > ul > li > img {
+    height: 4vh;
+    width: 4vh;
+    margin: 0 2vw;
+}
+
+
+#id-details-start-button {
+    width: 45vw;
+    height: 8vh;
+    /* border: 1px solid red; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

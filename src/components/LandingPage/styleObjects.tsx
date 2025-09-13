@@ -27,13 +27,14 @@ const LoginStyleObj = {
     fontSize: "15px"
 }
 
-const ArrowStyleObj = {
+const StartQuizButtonStyleObj
+    = {
     color: "white",
-    width: "70px",
-    height: "30px",
+    width: "12vw",
+    height: "6vh",
     bgColor: "#1341e8",
     border: "none",
-    borderRadius: "50%",
+    borderRadius: "5px",
     paddingBottom: "10px",
     paddingTop: "10px",
     paddingLeft: "10px",
@@ -62,7 +63,7 @@ const ActiveOptionStyleObj = {
     width: "inherit",
     height: "25px",
     bgColor: "none",
-    border: "1px solid #d1d1d1",
+    border: "2px solid #1341e8",
     borderRadius: "none",
     paddingBottom: "0px",
     paddingTop: "1px",
@@ -94,5 +95,5 @@ export {
     ActiveOptionStyleObj,
     InactiveOptionStyleObj,
     AddNewQuizStyle,
-    ArrowStyleObj
+    StartQuizButtonStyleObj
 }
