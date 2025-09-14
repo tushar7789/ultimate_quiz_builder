@@ -57,8 +57,9 @@ export interface IrregularOptionInterface {
 
 export interface ButtonInterface {
     'text'?: string | undefined,
+    'class'?: string | undefined,
     'onClick'?: React.MouseEventHandler<HTMLDivElement> | undefined,
-    'style'?: ButtonStyleInterface | any
+    'style'?: ButtonStyleInterface | any,
 }
 
 export interface ButtonStyleInterface {

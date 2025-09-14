@@ -5,6 +5,7 @@ import { ButtonInterface, ButtonStyleInterface } from '@/interfaces/interfaces'
 
 const Button: React.FC<ButtonInterface> = ({
     text,
+    class: string,
     onClick,
     style: {
         boxSizing = "border-box",
@@ -20,7 +21,7 @@ const Button: React.FC<ButtonInterface> = ({
         paddingRight = "20px",
         cursor = "pointer",
         fontSize = "20px"
-    } = {}
+    } = {},
 }) => {
 
     const styleObj = {
@@ -40,7 +41,7 @@ const Button: React.FC<ButtonInterface> = ({
     }
 
     return (
-        <div className="btn-container" style={styleObj} onClick={onClick}>
+        <div className={`btn-container ${class { }}`} style={styleObj} onClick={onClick}>
             {text}
         </div>
     )

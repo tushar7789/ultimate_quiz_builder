@@ -15,9 +15,8 @@ const QuizListItem = () => {
     return (
         <>
             <p className='quiz-listitem sp'>
-                <span id='quiz-item-name'>Quiz Name</span>
+                <span id='quiz-item-name'>Name</span>
                 <span id='quiz-item-domain'>Category</span>
-                <span id='quiz-item-total_questions'>Total Questions</span>
             </p>
             <div className='quiz-list-container'>
 
@@ -31,7 +30,6 @@ const QuizListItem = () => {
                             >
                                 <span id='quiz-item-name'>{item['name']}</span>
                                 <span id='quiz-item-domain'>{item['domain']}</span>
-                                <span id='quiz-item-total_questions'>{item['total_questions']}</span>
                             </Link>
 
                         )

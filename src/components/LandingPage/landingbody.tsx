@@ -7,10 +7,7 @@ import { AddNewQuizStyle } from './styleObjects'
 const LandingBody = () => {
     return (
         <div className='landingbody-container'>
-            <div className='lb-section-1'>
-                BUILD.
-                {/* <Button text={"+ New Quiz"} style={AddNewQuizStyle} /> */}
-            </div>
+            <div className='lb-section-1'>BUILD.</div>
             <div className="lb-section-2">YOUR QUIZ.</div>
             <div className="lb-section-3">NOW.</div>
         </div>

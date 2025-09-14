@@ -1,5 +1,5 @@
 .about-container {
-    width: inherit;
+    width: 88vw;
     height: 80vh;
     /* border: 1px solid green; */
     
@@ -31,7 +31,8 @@
 .about-right-container {
     width: 38vw;
     height: 80vh;
-    /* border: 1px solid red; */
+    border: 1px solid black;
+    border-left: none;
 
     display: flex;
     flex-direction: column;

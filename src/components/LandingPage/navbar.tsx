@@ -43,14 +43,14 @@ const Navbar = () => {
                             cursor: 'pointer'
                         }}
                     >
-                        Quiz B
+                        Q.B.
                     </p>
 
                 </div>
             </Link>
             <div className="navbar-menu">
                 <Link href="/home">
-                    <Button text={"Home"} style={getClass('Home', currPage)} />
+                    <Button text={"Home"} style={getClass('Home', currPage)} class='nav-menu-extra' />
                 </Link>
                 <Link href="/quiz">
                     <Button text={"Quizes"} style={getClass('Quiz', currPage)} />

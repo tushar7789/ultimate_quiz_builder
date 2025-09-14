@@ -5,7 +5,7 @@ import './styles.css'
 
 import { SetPage } from '@/contexts/NavbarContextProvider';
 import QuizListItem from '@/components/QuizListItem/quizlistitem';
-import QuizTags from '@/components/QuizListItem/quiztags';
+import QuizSearch from '@/components/QuizListItem/quizsearch';
 
 
 const Quiz = () => {
@@ -16,11 +16,10 @@ const Quiz = () => {
     return (
         <div className='quiz-container'>
             <div className='quiz-top-container'>
-                <p style={{ fontSize: "15px", marginBottom: "10px" }}>Tags</p>
-                <QuizTags />
+                <QuizSearch />
             </div>
             <div className='quiz-bottom-container'>
-                <p style={{ fontSize: "15px", marginBottom: "10px" }}>Quiz List</p>
+                <p style={{ fontSize: "15px", marginBottom: "10px", fontWeight: "550" }}>Quiz List</p>
                 <QuizListItem />
             </div>
         </div>
