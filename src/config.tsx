@@ -19,5 +19,5 @@ export let Paths = [
     "/home",
     "/quiz",
     "/statistics",
-    "/about"
+    "/about",
 ]

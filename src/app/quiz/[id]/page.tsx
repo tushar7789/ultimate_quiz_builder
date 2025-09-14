@@ -1,7 +1,9 @@
 'use client'
 
 import React from 'react'
-import { usePathname } from 'next/navigation'
+import Link from 'next/link';
+
+import { usePathname, useRouter } from 'next/navigation'
 
 import CategoryIcon from '../../../../public/static-images/categories-icon.png';
 import TotalQuestionsIcon from '../../../../public/static-images/total-questions-icon.png';
@@ -10,14 +12,24 @@ import DifficultyIcon from '../../../../public/static-images/difficulty-icon.png
 import Button from '@/components/Button/button';
 import { StartQuizButtonStyleObj } from '@/components/LandingPage/styleObjects';
 import { quizList } from '@/fakeAPI_data';
+import { Paths } from '@/config';
+
 
 const SelectedQuiz = () => {
     const pathname = usePathname();
+    const router = useRouter();
+
     const id: any = pathname.split('/').at(-1);
     const obj = quizList.map(item => {
         if (item["id"] === Number(id)) return item;
     });
-    console.log("bojext", obj);
+
+    // console.log("bojext", obj);
+
+    const handleAttemptQuizClick = () => {
+        Paths.push(`/quiz/${id}/questions`);
+        router.push(`/quiz/${id}/questions`);
+    }
 
     return (
         <div className="quiz-id-container">
@@ -32,7 +44,7 @@ const SelectedQuiz = () => {
                                 <li>
                                     <img src={CategoryIcon.src} alt="" />
                                     <span className='id-details-label'>Category</span>
-                                    <span className='id-details-value'>{obj[id - 1]?.domain}</span>
+                                    <span className='id-details-value'>{obj[id - 1]?.category}</span>
 
                                 </li>
                                 <li>
@@ -53,7 +65,7 @@ const SelectedQuiz = () => {
                             </ul>
                         </div>
                         <div id='id-details-start-button'>
-                            <Button text={"Start"} style={StartQuizButtonStyleObj} />
+                            <Button text={"Attemp Quiz"} onClick={handleAttemptQuizClick} style={StartQuizButtonStyleObj} />
                         </div>
                     </div> :
                     "Loading..."

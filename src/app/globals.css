@@ -36,6 +36,7 @@ body {
   height: 88vh;
   width: 100vw;
   /* border: 1px solid red; */
+  font-weight: 550;
 
   display: flex;
   align-items: center;

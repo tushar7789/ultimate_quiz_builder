@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './styles.css'
 import Link from 'next/link';
 
@@ -8,9 +8,19 @@ import { Paths } from '@/config';
 
 const QuizListItem = () => {
 
-    quizList.map(item => {
-        Paths.push(`/quiz/${item["id"]}`);
-    })
+    useEffect(() => {
+        quizList.map(item => {
+            Paths.push(`/quiz/${item["id"]}`);
+        });
+
+        return () => {
+            Paths.filter(path => {
+                let a = path.split("/");
+
+                return !(a.length === 3 && typeof a[2] === 'number');
+            })
+        }
+    }, []);
 
     return (
         <>
@@ -25,11 +35,11 @@ const QuizListItem = () => {
                         return (
                             <Link
                                 href={`/quiz/${item["id"]}`}
-                                key={item['domain']}
+                                key={item['category']}
                                 className='quiz-listitem'
                             >
                                 <span id='quiz-item-name'>{item['name']}</span>
-                                <span id='quiz-item-domain'>{item['domain']}</span>
+                                <span id='quiz-item-domain'>{item['category']}</span>
                             </Link>
 
                         )

@@ -43,6 +43,36 @@ const StartQuizButtonStyleObj
     fontSize: "15px"
 }
 
+const TimerStyleObj = {
+    color: "white",
+    width: "50px",
+    height: "25px",
+    bgColor: "gray",
+    border: "none",
+    borderRadius: "5px",
+    paddingBottom: "0px",
+    paddingTop: "0px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    cursor: "pointer",
+    fontSize: "15px"
+}
+
+const NextButtonStyleObj = {
+    color: "white",
+    width: "100px",
+    height: "25px",
+    bgColor: "#1341e8",
+    border: "none",
+    borderRadius: "5px",
+    paddingBottom: "0px",
+    paddingTop: "0px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    cursor: "pointer",
+    fontSize: "15px"
+}
+
 const InactiveOptionStyleObj = {
     color: "black",
     width: "inherit",
@@ -95,5 +125,7 @@ export {
     ActiveOptionStyleObj,
     InactiveOptionStyleObj,
     AddNewQuizStyle,
-    StartQuizButtonStyleObj
-}
+    StartQuizButtonStyleObj,
+    TimerStyleObj,
+    NextButtonStyleObj
+}   

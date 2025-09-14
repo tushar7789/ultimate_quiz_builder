@@ -12,28 +12,26 @@ import Button from '../Button/button';
 import { API } from '@/config';
 import './styles.css';
 import { APIQuesInterface } from '@/interfaces/interfaces';
-
+import { questions } from '@/fakeAPI_data';
 
 const Quiz = () => {
 
-    const [questions, setQuestions] = useState<APIQuesInterface[]>();
+    const [ques, setQues] = useState<APIQuesInterface[]>(questions);
     const { currQues, dispatch } = currQuesReducer();
 
     useEffect(() => {
-        const controller = new AbortController();
         const getQuestions = async () => {
-            const data = await fetch(API, { 'signal': controller.signal });
+            const data = await fetch(API);
             const json = await data.json();
             console.log('logging qes: ', json.results);
-            setQuestions(json.results);
+            setQues(json.results);
         }
 
-        getQuestions();
-        dispatch({ type: 'READY' });
+        // getQuestions();
+        // dispatch({ type: 'READY' });
 
-        return () => {
-            controller.abort();
-        }
+        // setQuestions(questions);
+        dispatch({ type: 'ACTIVE', payload: questions?.at(currQues['currIndex'] + 1) });
     }, []);
 
     const handleClick = () => {
@@ -41,18 +39,7 @@ const Quiz = () => {
     }
 
     return (
-        <Grid
-            container
-            size={10}
-            style={{
-                // border: "1px solid yellow",
-                height: "inherit",
-                color: 'white'
-            }}
-            alignItems={'center'}
-            justifyContent={'space-around'}
-            direction={'column'}
-        >
+        <div className="main-quiz-container">
             {
                 currQues['status'] === 'LOADING' &&
                 <CircularProgress />
@@ -78,7 +65,7 @@ const Quiz = () => {
                 currQues['status'] === 'FINISHED' &&
                 <div>You have successfully Finished the Quiz!!</div>
             }
-        </Grid>
+        </div>
     )
 }
 

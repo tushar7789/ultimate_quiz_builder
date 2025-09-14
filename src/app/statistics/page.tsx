@@ -1,16 +1,19 @@
 'use client'
-
-import { SetPage } from '@/contexts/NavbarContextProvider';
 import React from 'react'
+
+import Quiz from '@/components/Quiz/index';
+import { SetPage } from '@/contexts/NavbarContextProvider';
+
 
 const Statistics = () => {
 
     SetPage('Statistics');
 
     return (
-        <div>
-            Statistics
-        </div>
+        // <div>
+        //     Statistics
+        // </div>
+        <Quiz />
     )
 }
 

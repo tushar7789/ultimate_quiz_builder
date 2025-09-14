@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css'
 import { FooterPropInterface } from '@/interfaces/interfaces';
 import Button from '../Button/button';
-import { DEFAULT_SANS_SERIF_FONT } from 'next/dist/shared/lib/constants';
+import { TimerStyleObj, NextButtonStyleObj } from '../LandingPage/styleObjects';
 
 const Footer: React.FC<FooterPropInterface> = ({ dispatch, payload, index, totalLength }) => {
 
@@ -19,15 +19,19 @@ const Footer: React.FC<FooterPropInterface> = ({ dispatch, payload, index, total
 
     return (
         <div className="buttons-container">
-            <Button text={"Time Left : 02:32"} onClick={() => { }} />
-            <Button text=
+            <Button text={"Time Left : 02:32"} onClick={() => { }} style={TimerStyleObj} />
+            <Button
+                text=
                 {
                     index !== undefined ?
                         index + 1 === totalLength ?
                             "Finish" :
                             "Next" :
                         null
-                } onClick={handleNextClick} />
+                }
+                onClick={handleNextClick}
+                style={NextButtonStyleObj}
+            />
         </div>
     )
 }

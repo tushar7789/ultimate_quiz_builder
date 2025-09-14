@@ -56,3 +56,54 @@ export const quizList = [
         estimated_time: 'none'
     }
 ]
+
+export const questions = [
+    {
+        question: 'What is Indian Republic Day',
+        correct_answer: '26 Jan 1950',
+        incorrect_answers: ['27 Feb 1945', '03 Sep 1932', '13 Jun 1965'],
+        difficulty: 'easy',
+        category: 'General Knowledge',
+        type: 'multiple'
+    },
+    {
+        question: 'How many years are there in an Year',
+        correct_answer: '12',
+        incorrect_answers: ['9', '20', '5'],
+        difficulty: 'easy',
+        category: 'General Knowledge',
+        type: 'multiple'
+    },
+    {
+        question: 'What is Indian Republic Day',
+        correct_answer: '26 Jan 1950',
+        incorrect_answers: ['27 Feb 1945', '03 Sep 1932', '13 Jun 1965'],
+        difficulty: 'easy',
+        category: 'General Knowledge',
+        type: 'multiple'
+    },
+    {
+        question: 'How many years are there in an Year',
+        correct_answer: '12',
+        incorrect_answers: ['9', '20', '5'],
+        difficulty: 'easy',
+        category: 'General Knowledge',
+        type: 'multiple'
+    },
+    {
+        question: 'What is Indian Republic Day',
+        correct_answer: '26 Jan 1950',
+        incorrect_answers: ['27 Feb 1945', '03 Sep 1932', '13 Jun 1965'],
+        difficulty: 'easy',
+        category: 'General Knowledge',
+        type: 'multiple'
+    },
+    {
+        question: 'How many years are there in an Year',
+        correct_answer: '12',
+        incorrect_answers: ['9', '20', '5'],
+        difficulty: 'easy',
+        category: 'General Knowledge',
+        type: 'multiple'
+    }
+]
