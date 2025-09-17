@@ -34,8 +34,8 @@ export interface QuestionsPropInterface {
 }
 
 export interface ProgressBarPropInterface {
-    'currQues': initialQuesInterface,
-    'questions': APIQuesInterface[] | undefined
+    'currQuesIndex': number | undefined,
+    'quesLength': number | undefined
 }
 
 export interface FooterPropInterface {

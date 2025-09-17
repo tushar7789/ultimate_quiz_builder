@@ -67,7 +67,7 @@ export const questions = [
         type: 'multiple'
     },
     {
-        question: 'How many years are there in an Year',
+        question: 'How many months are there in an Year',
         correct_answer: '12',
         incorrect_answers: ['9', '20', '5'],
         difficulty: 'easy',
@@ -83,7 +83,7 @@ export const questions = [
         type: 'multiple'
     },
     {
-        question: 'How many years are there in an Year',
+        question: 'How many months are there in an Year',
         correct_answer: '12',
         incorrect_answers: ['9', '20', '5'],
         difficulty: 'easy',
@@ -99,7 +99,7 @@ export const questions = [
         type: 'multiple'
     },
     {
-        question: 'How many years are there in an Year',
+        question: 'How many months are there in an Year',
         correct_answer: '12',
         incorrect_answers: ['9', '20', '5'],
         difficulty: 'easy',

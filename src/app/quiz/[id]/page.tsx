@@ -24,7 +24,6 @@ const SelectedQuiz = () => {
         if (item["id"] === Number(id)) return item;
     });
 
-    // console.log("bojext", obj);
 
     const handleAttemptQuizClick = () => {
         Paths.push(`/quiz/${id}/questions`);

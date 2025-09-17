@@ -4,12 +4,13 @@ import { ProgressBarPropInterface } from '@/interfaces/interfaces';
 
 import './styles.css'
 
-const ProgressBar: React.FC<ProgressBarPropInterface> = ({ currQues, questions }) => {
-    let qLength, percentage = 0;
-    if (questions !== undefined) {
-        qLength = questions.length;
-        percentage = Math.floor(((currQues['currIndex']) / qLength) * 100);
+const ProgressBar: React.FC<ProgressBarPropInterface> = ({ currQuesIndex, quesLength }) => {
+    let percentage = 0;
+    if (quesLength !== undefined && currQuesIndex !== undefined) {
+        percentage = Math.floor((currQuesIndex / quesLength) * 100);
     }
+
+    console.log("percentage", percentage, "currIndex :", currQuesIndex);
 
     return (
         <div className='progress-bar-container'>
@@ -23,8 +24,14 @@ const ProgressBar: React.FC<ProgressBarPropInterface> = ({ currQues, questions }
                 }}
             />
             <div className="progress-tags">
-                <p id='ques-num'>Question {currQues['currIndex'] + 1}/{qLength}</p>
-                <p id='points'>30/100 Points</p>
+                {
+                    currQuesIndex !== undefined && quesLength !== undefined ?
+                        <>
+                            <p id='ques-num'>Question {currQuesIndex + 1}/{quesLength}</p>
+                            <p id='points'>30/100 Points</p>
+                        </> :
+                        null
+                }
             </div>
         </div>
     )
