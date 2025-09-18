@@ -199,3 +199,20 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
+
+/* --------------------  Finished Styles   -------------------------- */
+
+.finished-container {
+    width: 50vw;
+    height: 60vh;
+    border: 2px solid #1341e8;
+    border-radius: 10px;
+
+    margin: auto;
+}
+
+/* #attempted, #correcty-answered, #points-scored {
+
+} */

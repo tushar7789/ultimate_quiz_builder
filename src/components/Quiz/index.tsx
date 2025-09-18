@@ -9,6 +9,7 @@ import Questions from './questions';
 import ProgressBar from './progressBar';
 import Footer from './footer';
 import Ready from './ready';
+import Finished from './finished';
 
 import { API } from '@/config';
 import './styles.css';
@@ -48,7 +49,7 @@ const Quiz = () => {
             }
             {
                 currQues['status'] === 'FINISHED' &&
-                <div>You have successfully Finished the Quiz!!</div>
+                <Finished />
             }
         </div>
     )
