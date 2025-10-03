@@ -10,7 +10,7 @@ import TotalQuestionsIcon from '../../../../public/static-images/total-questions
 import TotalMarksIcon from '../../../../public/static-images/total-score-icon.png';
 import DifficultyIcon from '../../../../public/static-images/difficulty-icon.png';
 import Button from '@/components/Button/button';
-import { StartQuizButtonStyleObj } from '@/components/LandingPage/styleObjects';
+import { StartQuizButtonStyleObj } from '@/styles/styleObjects';
 import { quizList } from '@/fakeAPI_data';
 import { Paths } from '@/config';
 
@@ -64,10 +64,10 @@ const SelectedQuiz = () => {
                             </ul>
                         </div>
                         <div id='id-details-start-button'>
-                            <Button text={"Attemp Quiz"} onClick={handleAttemptQuizClick} style={StartQuizButtonStyleObj} />
+                            <Button text={"Attempt Quiz"} onClick={handleAttemptQuizClick} style={StartQuizButtonStyleObj} />
                         </div>
                     </div> :
-                    "Loading..."
+                    null
             }
 
             <div className="quiz-id-right-container">

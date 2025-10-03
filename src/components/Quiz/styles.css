@@ -85,7 +85,7 @@
     height: 18%;
     border-radius: 50px;
     /* background-color: white; */
-    border: 2px solid #1341e8;
+    border: 2px solid #3054e3;
 
     display: flex;
     justify-content: start;
@@ -97,7 +97,7 @@
 
 .option:hover {
     cursor: pointer;
-    background-color: #1341e8;
+    background-color: #3054e3;
     color: white;
 }
 
@@ -106,7 +106,7 @@
 .option-tag {
     width: 7.5%;
     height: 80%;
-    background-color: #1341e8;
+    background-color: #3054e3;
     border-radius: 50%;
 
     display: flex;
@@ -117,7 +117,7 @@
 .option:hover .option-tag{
     cursor: pointer;
     background-color: white;
-    color: #1341e8;
+    color: #3054e3;
 }
 
 /* TEXT------------------------------ */
@@ -137,7 +137,7 @@
     width: 100%;
     height: 18%;
     border-radius: 50px;
-    background-color: #3bb349;
+    background-color: #4bc947;
 
     display: flex;
     justify-content: end;
@@ -202,17 +202,84 @@
 
 
 
+/* --------------------  Ready Styles   -------------------------- */
+
+.ready-container {
+    width: fit-content;
+    padding: 2rem;
+    /* border: 1px solid red; */
+    background-color: #d1d1d1;
+    border-radius: 12px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ready-container > p {
+    margin-bottom: 2rem;
+}
+
+
 /* --------------------  Finished Styles   -------------------------- */
 
 .finished-container {
-    width: 50vw;
+    width: 40vw;
     height: 60vh;
-    border: 2px solid #1341e8;
-    border-radius: 10px;
-
+    background-color: #d1d1d1;
+    border-radius: 12px;
     margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
 
-/* #attempted, #correcty-answered, #points-scored {
+.finished-container > p {
+    font-size: 35px;
+    margin: 2rem 0 1rem 0;
+}
 
-} */
+#attempted, #correctly-answered, #points-scored {
+    width: 80%;
+    height: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 18px;
+}
+
+#points-scored {
+    margin-bottom: 1rem;
+}
+
+.attempted-text, .attempted-colon, .attempted-number {
+    display: flex;
+    align-items: center;
+}
+
+
+.attempted-text {
+    width: 70%;
+    height: 100%;
+
+    /* border: 1px solid red; */
+}
+
+.attempted-colon {
+    width: 5%;
+    height: 100%;
+    /* border: 1px solid red; */
+} 
+
+.attempted-number {
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid red; */
+    justify-content: center;
+}

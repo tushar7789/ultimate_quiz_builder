@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css'
 import { FooterPropInterface } from '@/interfaces/interfaces';
 import Button from '../Button/button';
-import { TimerStyleObj, NextButtonStyleObj } from '../LandingPage/styleObjects';
+import { TimerStyleObj, NextButtonStyleObj } from '../../styles/styleObjects';
 
 const Footer: React.FC<FooterPropInterface> = ({ dispatch, payload, index, totalLength }) => {
 

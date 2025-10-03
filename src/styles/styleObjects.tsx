@@ -16,10 +16,10 @@ const LoginStyleObj = {
     color: "white",
     width: "inherit",
     height: "25px",
-    bgColor: "#1341e8",
+    bgColor: "#3054e3",
     border: "none",
     borderRadius: "5px",
-    paddingBottom: "0px",
+    paddingBottom: "1px",
     paddingTop: "0px",
     paddingLeft: "10px",
     paddingRight: "10px",
@@ -32,7 +32,7 @@ const StartQuizButtonStyleObj
     color: "white",
     width: "12vw",
     height: "6vh",
-    bgColor: "#1341e8",
+    bgColor: "#3054e3",
     border: "none",
     borderRadius: "5px",
     paddingBottom: "10px",
@@ -62,7 +62,7 @@ const NextButtonStyleObj = {
     color: "white",
     width: "100px",
     height: "25px",
-    bgColor: "#1341e8",
+    bgColor: "#3054e3",
     border: "none",
     borderRadius: "5px",
     paddingBottom: "0px",
@@ -89,11 +89,11 @@ const InactiveOptionStyleObj = {
 }
 
 const ActiveOptionStyleObj = {
-    color: "#1341e8",
+    color: "#3054e3",
     width: "inherit",
     height: "45px",
     bgColor: "none",
-    border: "2px solid #1341e8",
+    border: "2px solid #3054e3",
     borderRadius: "none",
     paddingBottom: "0px",
     paddingTop: "0px",
@@ -103,11 +103,11 @@ const ActiveOptionStyleObj = {
     fontSize: "17px"
 }
 
-const AddNewQuizStyle = {
+const GoToDashboardStyle = {
     color: "white",
-    width: "10vw",
-    height: "5vh",
-    bgColor: "#1341e8",
+    width: "25vw",
+    height: "6vh",
+    bgColor: "#3054e3",
     border: "none",
     borderRadius: "5px",
     paddingBottom: "0px",
@@ -115,7 +115,7 @@ const AddNewQuizStyle = {
     paddingLeft: "10px",
     paddingRight: "10px",
     cursor: "pointer",
-    fontSize: "15px"
+    fontSize: "20px"
 }
 
 
@@ -124,7 +124,7 @@ export {
     LoginStyleObj,
     ActiveOptionStyleObj,
     InactiveOptionStyleObj,
-    AddNewQuizStyle,
+    GoToDashboardStyle,
     StartQuizButtonStyleObj,
     TimerStyleObj,
     NextButtonStyleObj

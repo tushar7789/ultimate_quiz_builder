@@ -5,7 +5,7 @@
 
 .navbar-container {
     width: 88vw;
-    height: 12vh;
+    height: 10vh;
     /* border-bottom: 1px solid #327cc7; */
     margin: auto;
 
@@ -69,7 +69,7 @@
     width: inherit;
     height: 26vh;
     /* border: 1px solid red; */
-    color: #1341e8;
+    color: #3054e3;
     font-size: 135px;
     font-weight: 900;
 
@@ -84,7 +84,7 @@
     width: inherit;
     height: 26vh;
     /* border: 1px solid red; */
-    color: #1341e8;
+    color: #3054e3;
     font-size: 135px;
     font-weight: 900;
 
@@ -99,7 +99,7 @@
     width: inherit;
     height: 26vh;
     /* border: 1px solid red; */
-    color: #1341e8;
+    color: #3054e3;
     font-size: 135px;
     font-weight: 900;
 

@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Link from 'next/link'
 
@@ -5,7 +7,7 @@ import Link from 'next/link'
 import './styles.css'
 
 import Button from '../Button/button';
-import { LoginStyleObj, ActiveOptionStyleObj, InactiveOptionStyleObj } from './styleObjects';
+import { LoginStyleObj, ActiveOptionStyleObj, InactiveOptionStyleObj } from '../../styles/styleObjects';
 import MainLogo from '../../../public/static-images/main-logo.png';
 import { useNavbarContext } from '@/contexts/NavbarContextProvider';
 import { NavbarContextValues } from '@/interfaces/interfaces';
@@ -49,8 +51,8 @@ const Navbar = () => {
                 </div>
             </Link>
             <div className="navbar-menu">
-                <Link href="/home">
-                    <Button text={"Home"} style={getClass('Home', currPage)} class='nav-menu-extra' />
+                <Link href="/">
+                    <Button text={"Home"} style={getClass('Home', currPage)} />
                 </Link>
                 <Link href="/quiz">
                     <Button text={"Quizes"} style={getClass('Quiz', currPage)} />

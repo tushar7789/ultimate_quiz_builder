@@ -26,15 +26,46 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: white;
-  font-family: 'Courier New', Courier, monospace;
+  background-color: #696a6b;
+  /* font-family: 'Courier New', Courier, monospace; */
+
+  /* display: flex; */
 }
 
 /* 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif */
 
+/* .side-bar {
+  height: 100vh;
+  width: 15vw;
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+} */
+
+/* .content-space {
+  height: 100vh;
+  width: 85vw;
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}   */
+
+/* .top-bar {
+  height: 10vh;
+  width: inherit;
+  border: 1px solid yellow;
+} */
+
+
 .body-content {
-  height: 88vh;
-  width: 100vw;
+  height: 90vh;
+  width: inherit;
   /* border: 1px solid red; */
   font-weight: 550;
 

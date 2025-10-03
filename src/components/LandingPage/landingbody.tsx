@@ -2,7 +2,6 @@ import React from 'react'
 import './styles.css'
 
 import Button from '../Button/button'
-import { AddNewQuizStyle } from './styleObjects'
 
 const LandingBody = () => {
     return (
